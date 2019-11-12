@@ -15,7 +15,7 @@ if (!config.get("myprivatekey")) {
 
 //connect to mongodb
 mongoose
-  .connect("mongodb://localhost/nodejsauth", { useNewUrlParser: true })
+  .connect("mongodb+srv://" + process.env.MONGO_USERNAME + ":" + process.env.MONGO_PASSWORD + "@multipass-demo-vkuh2.mongodb.net/test?retryWrites=true&w=majority", { useNewUrlParser: true })
   .then(() => console.log("Connected to MongoDB..."))
   .catch(err => console.error("Could not connect to MongoDB..." + err));
 
