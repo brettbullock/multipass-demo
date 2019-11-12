@@ -5,7 +5,8 @@
   "rootDir": "server",
   "main": "index.js",
   "engines": {
-    "node": "^10.15.3"
+    "node": "^10.15.3",
+    "yarn": "^1.19.1"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
