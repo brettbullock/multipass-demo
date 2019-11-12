@@ -9,7 +9,12 @@ module.exports = function(req, res, next) {
 
   try {
     //if can verify the token, set req.user and pass to next middleware
-    const decoded = jwt.verify(token, config.get("myprivatekey"));
+    // local
+    // const decoded = jwt.verify(token, config.get("myprivatekey"));
+    // production
+    const decoded = jwt.verify(token, process.env.MY_PRIVATE_KEY);
+
+
     req.user = decoded;
     next();
   } catch (ex) {

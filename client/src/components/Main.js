@@ -32,7 +32,7 @@ class Main extends React.Component {
     if (!this.state.sessionAuth) {
       return
     }
-    const response = await fetch('http://localhost:4000/api/users/current', {
+    const response = await fetch('/api/users/current', {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
@@ -91,11 +91,11 @@ class Main extends React.Component {
   }
 
   handleNewUserSubmit = async (values) => {
-    this.apiCall('http://localhost:4000/api/users', 'POST', values)
+    this.apiCall('/api/users', 'POST', values)
   }
 
   handleLogInSubmit = async (values) => {
-    this.apiCall('http://localhost:4000/api/users/login', 'POST', values)
+    this.apiCall('/api/users/login', 'POST', values)
   }
 
   handleLogOut = () => {
