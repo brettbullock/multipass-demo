@@ -1,5 +1,7 @@
 body {
+  font-family: 'Roboto', sans-serif;
   text-align: center;
+  background-color: #f5f5f5f5;
 }
 
 input {
@@ -7,43 +9,123 @@ input {
   margin: 10px 0 10px 0;
 }
 
-.errorLabel {
+#root {
+  width: 50%;
+  max-width: 500px;
+  display: inline-block;
+}
+
+.title {
+  margin-top: 15vh;
+}
+
+.error-label {
   display: block;
   color: red;
 }
 
-.main {
-  width: 40%;
-  display: inline-block;
-
+.input-label {
+  margin-top: 10px
 }
 
-.inputLabel {
-  padding-top: 10px
+.user-message {
+  width: 100%;
 }
 
-.userOptions {
+.user-message--selected {
+  border: 1px solid #aaa;
+  background-color: white;
+  padding: 30px 0 30px 0;
+}
+
+.user-options {
   text-align: center;
   margin-top: 10px;
 }
 
-.pairedButton {
-  margin: 0 5px 0 5px;
+.paired-button {
+  margin: 15px 5px 0 5px;
 }
 
-button.submitRequired {
+button.submit-required {
   border: 2px solid red;  
 }
 
 .form {
   padding: 10px 0 80px 0;
+  height: 100vh;
+  max-height: 426px;
 }
 
-.errorMsg {
+.error-msg {
   margin: 0 0 8px 0;
 }
 
 /* intro.js */
 div.myHighlightClass {
   padding: 0 0 10px 0;
+}
+
+/* react-tabs */
+.react-tabs {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.react-tabs__tab-list {
+  border-bottom: 1px solid #aaa;
+  text-align: initial;
+  margin: 0;
+  padding: 0;
+}
+
+.react-tabs__tab {
+  display: inline-block;
+  border: 1px solid transparent;
+  border-bottom: none;
+  bottom: -1px;
+  position: relative;
+  list-style: none;
+  padding: 6px 12px;
+  cursor: pointer;
+}
+
+.react-tabs__tab--selected {
+  background: #fff;
+  border-color: #aaa;
+  color: black;
+  border-radius: 5px 5px 0 0;
+}
+
+.react-tabs__tab--disabled {
+  color: GrayText;
+  cursor: default;
+}
+
+.react-tabs__tab:focus {
+  box-shadow: 0 0 5px hsl(208, 99%, 50%);
+  border-color: hsl(208, 99%, 50%);
+  outline: none;
+}
+
+.react-tabs__tab:focus:after {
+  content: "";
+  position: absolute;
+  height: 5px;
+  left: -4px;
+  right: -4px;
+  bottom: -5px;
+  background: #fff;
+}
+
+.react-tabs__tab-panel {
+  display: none;
+  background-color: white;
+  border-left: 1px solid #aaa;
+  border-right: 1px solid #aaa;
+  border-bottom: 1px solid #aaa;
+  padding: 30px 30px 30px 30px;
+}
+
+.react-tabs__tab-panel--selected {
+  display: block;
 }

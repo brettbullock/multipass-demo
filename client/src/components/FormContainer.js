@@ -1,7 +1,6 @@
 import React from 'react'
 
 import '../styles/App.css'
-import 'react-tabs/style/react-tabs.css'
 
 import UserForm from './UserForm'
 

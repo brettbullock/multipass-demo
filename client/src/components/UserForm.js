@@ -57,8 +57,8 @@ class UserForm extends React.Component {
             {newUser && 
               <React.Fragment>
                 <Text 
-                  textType='h2'
-                  className='inputLabel'
+                  textType='h4'
+                  className='input-label'
                 >
                   Name:
                 </Text>
@@ -67,14 +67,14 @@ class UserForm extends React.Component {
                   name='name' 
                   placeholder='Full Name' 
                   error={errors.name} 
-                  errorComponent={(error) => <p className="errorMsg">{error}</p>} 
+                  errorComponent={(error) => <p className="error-msg">{error}</p>} 
                   onChange={handleChange}
                 />
               </React.Fragment> 
             }
             <Text 
-              textType='h2'
-              className='inputLabel'  
+              textType='h4'
+              className='input-label'  
             >
               Email:
             </Text>
@@ -83,11 +83,11 @@ class UserForm extends React.Component {
               name='email' 
               placeholder='Email' 
               error={errors.email}
-              errorComponent={(error) => <p className="errorMsg">{error}</p>}
+              errorComponent={(error) => <p className="error-msg">{error}</p>}
               onChange={handleChange}/>
             <Text 
-              textType='h2'
-              className='inputLabel'  
+              textType='h4'
+              className='input-label'  
             >
               Password:
             </Text>
@@ -95,17 +95,17 @@ class UserForm extends React.Component {
               htmlType='password' 
               name='password'
               error={errors.password}
-              errorComponent={(error) => <p className="errorMsg">{error}</p>}
+              errorComponent={(error) => <p className="error-msg">{error}</p>}
               onChange={handleChange}/>
             <Button
               type="submit"
-              id="submitButton"
-              className={this.props.submitRequired ? 'submitRequired' : ''}
+              id="submit-button"
+              className={this.props.submitRequired ? 'submit-required' : ''}
             >
               {newUser ? 'Create New User' : 'Log In'}
             </Button>
             {this.props.submitRequired &&
-              <p className="errorLabel">Create new user before continuing</p> 
+              <p className="error-label">Create new user before continuing</p> 
             }
           </Form>
         }

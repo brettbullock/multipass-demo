@@ -41,7 +41,7 @@ class Main extends React.Component {
     })
 
     const body = await response.json()
-    console.log(body)
+
     this.setState({
       body,
       isAuthenticated: true
@@ -111,7 +111,7 @@ class Main extends React.Component {
     } = this.state
 
     return (
-      <div className="main">
+      <React.Fragment>
         <Steps
           enabled={false}
           steps={introSteps}
@@ -134,7 +134,7 @@ class Main extends React.Component {
           submitRequired={submitRequired}
           isAuthenticated={isAuthenticated}
         />
-        <div className='user-message'>
+        <div className={isAuthenticated ? 'user-message user-message--selected' : 'user-message'}>
           {isAuthenticated &&
             <UserInfo
               handleLogOut={this.handleLogOut}
@@ -145,7 +145,7 @@ class Main extends React.Component {
             />
           }
         </div>
-      </div>
+      </React.Fragment>
     )
   }
 }

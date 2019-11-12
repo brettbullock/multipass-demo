@@ -15,13 +15,13 @@ class UserInfo extends React.Component {
       handleLogOut
     } = this.props
     return (
-      <div>
+      <React.Fragment>
         <Text textType="h4">Welcome {name}</Text>
-        <div className="userOptions">
-          <a href={url}><Button className="pairedButton">Go Shopping</Button></a>
-          <Button onClick={handleLogOut} className="pairedButton">Log Out</Button>
+        <div className="user-options">
+          <a href={url}><Button className="paired-button">Go Shopping</Button></a>
+          <Button onClick={handleLogOut} className="paired-button">Log Out</Button>
         </div>
-      </div>
+      </React.Fragment>
     )
   }
 }
