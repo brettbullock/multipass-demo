@@ -7,7 +7,10 @@ const bodyParser = require('body-parser')
 const app = express();
 
 //use config module to get the privatekey, if no private key set, end the application
-if (!(config.get("myprivatekey") || process.env.MY_PRIVATE_KEY)) {
+// local
+// if (config.get("myprivatekey") {
+// production
+if (!process.env.MY_PRIVATE_KEY) {
   console.error("FATAL ERROR: myprivatekey is not defined.");
   process.exit(1);
 }
