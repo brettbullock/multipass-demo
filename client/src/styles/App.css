@@ -61,6 +61,18 @@ button.submit-required {
   margin: 0 0 8px 0;
 }
 
+@media only screen and (max-width: 768px) {
+  .input-label {
+    font-size: 20px;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .input-label {
+    font-size: 10px;
+  }
+}
+
 /* intro.js */
 div.myHighlightClass {
   padding: 0 0 10px 0;
