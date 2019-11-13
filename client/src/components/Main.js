@@ -79,10 +79,9 @@ class Main extends React.Component {
       }
     })
     
-    // const body = await response.json()
-    const bodyText = await response.text()
-    // console.log(body)
-    console.log(bodyText)
+    const body = await response.json()
+    console.log(body)
+
     // once body is returned, set state and add return to localstorage
     this.setState({
       body,
