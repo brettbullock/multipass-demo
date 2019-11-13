@@ -39,8 +39,10 @@ const UserSchema = new mongoose.Schema({
 
 //custom method to generate authToken - token expiry set to 10 mins
 UserSchema.methods.generateAuthToken = function() { 
-  const token = jwt.sign({ _id: this._id, isAdmin: this.isAdmin }, config.get('myprivatekey'), { expiresIn: '10m' }); //get the private key from the config file -> environment variable
-  return token;
+  // local
+  // const token = jwt.sign({ _id: this._id, isAdmin: this.isAdmin }, config.get('myprivatekey'), { expiresIn: '10m' }); //get the private key from the config file -> environment variable
+  // production
+  const token = jwt.sign({ _id: this._id, isAdmin: this.isAdmin }, process.env.MY_PRIVATE_KEY, { expiresIn: '10m' });
 }
 
 const User = mongoose.model('User', UserSchema);
