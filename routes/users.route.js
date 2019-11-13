@@ -14,7 +14,10 @@ const {
 
 multipassUrl = (user) => {
     // Construct the Multipassify encoder
-    var multipassify = new Multipassify(config.get("multipasskey"));
+    // local
+    // var multipassify = new Multipassify(config.get("multipasskey"));
+    // production
+    var multipassify = new Multipassify(process.env.MULTIPASS_KEY);
 
     // Construct a customer object for Multipass
     customerData = {
