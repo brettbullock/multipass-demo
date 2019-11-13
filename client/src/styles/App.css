@@ -62,14 +62,28 @@ button.submit-required {
 }
 
 @media only screen and (max-width: 768px) {
-  .input-label {
-    font-size: 20px;
+  #root {
+    width: 75%;
   }
 }
 
 @media only screen and (max-width: 320px) {
-  .input-label {
-    font-size: 10px;
+  #root {
+    width: 100%;
+  }
+
+  div.react-tabs__tab-panel--selected {
+    padding: 20px;
+  }
+  
+  span.input-label {
+    font-size: 20px;
+  }
+}
+
+@media only screen and (max-width: 210px) {
+  div.react-tabs__tab-panel--selected {
+    padding: 10px;
   }
 }
 
@@ -135,7 +149,7 @@ div.myHighlightClass {
   border-left: 1px solid #aaa;
   border-right: 1px solid #aaa;
   border-bottom: 1px solid #aaa;
-  padding: 30px 30px 30px 30px;
+  padding: 30px;
 }
 
 .react-tabs__tab-panel--selected {
