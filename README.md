@@ -24,12 +24,12 @@ comment out line 20
 You'll then need to install the dependencies by running `yarn install` in your terminal.
 
 From there, create a folder in the root (`~/`) folder of the project named `config`, and a file within the folder named `default.json`. In the `default.json` file, include the following: 
-`
+```
 {
   "myprivatekey": "<YOUR_PRIVATE_KEY>",
   "multipasskey": "<YOUR_MULTIPASS_KEY>"
 }
-`
+```
 
 Where `<YOUR_PRIVATE_KEY>` is a secret string defined by you and `<YOUR_MULTIPASS_KEY>` is the multipass key generated from the store in which you will be authenticating to. To get this string, follow step 1 of the instructions here: https://help.shopify.com/en/api/reference/plus/multipass
 
