@@ -8,6 +8,7 @@
     "intro.js-react": "^0.2.0",
     "kingsbury": "0.0.59",
     "lodash.template": "4.5.0",
+    "minimist": "1.2.2",
     "mixin-deep": "2.0.1",
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
