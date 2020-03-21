@@ -8,7 +8,7 @@ const app = express();
 
 //use config module to get the privatekey, if no private key set, end the application
 // local
-// if (config.get("myprivatekey") {
+// if (!config.get("myprivatekey")) {
 // production
 if (!process.env.MY_PRIVATE_KEY) {
   console.error("FATAL ERROR: myprivatekey is not defined.");
@@ -16,10 +16,16 @@ if (!process.env.MY_PRIVATE_KEY) {
 }
 
 //connect to mongodb
+// production
 mongoose
   .connect("mongodb+srv://" + process.env.MONGO_USERNAME + ":" + process.env.MONGO_PASSWORD + "@multipass-demo-vkuh2.mongodb.net/test?retryWrites=true&w=majority", { useNewUrlParser: true })
   .then(() => console.log("Connected to MongoDB..."))
   .catch(err => console.error("Could not connect to MongoDB..." + err));
+// local
+// mongoose
+//   .connect("mongodb://localhost/nodejsauth", { useNewUrlParser: true })
+//   .then(() => console.log("Connected to MongoDB..."))
+//   .catch(err => console.error("Could not connect to MongoDB..." + err));
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
